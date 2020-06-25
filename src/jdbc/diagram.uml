@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="436.0" y="129.0">command.Filter_starts_with_name</node>
+    <node x="1019.0" y="203.0">jdbc.Registration</node>
+    <node x="278.0" y="356.0">parser.Parser</node>
+    <node x="647.0" y="203.0">main.SendingHandler</node>
+    <node x="154.0" y="129.0">command.Info</node>
+    <node x="1192.0" y="203.0">main.Application</node>
+    <node x="663.0" y="356.0">main.User</node>
+    <node x="1517.0" y="203.0">main.Serializer</node>
+    <node x="1657.0" y="129.0">command.Add</node>
+    <node x="114.0" y="282.0">jdbc.RegistrationDAO</node>
+    <node x="248.0" y="129.0">command.Head</node>
+    <node x="154.0" y="203.0">jdbc.DAO</node>
+    <node x="898.5" y="0.0">command.ExecuteCommand</node>
+    <node x="0.0" y="282.0">jdbc.UserDAO</node>
+    <node x="1846.0" y="129.0">command.Add_if_min</node>
+    <node x="1268.0" y="129.0">command.Print_field_ascending_mood</node>
+    <node x="1745.0" y="129.0">command.Clear</node>
+    <node x="0.0" y="129.0">command.ExecuteScript</node>
+    <node x="1160.0" y="129.0">command.Update</node>
+    <node x="1509.0" y="129.0">command.Remove_by_id</node>
+    <node x="441.0" y="203.0">main.ConnectionHandler</node>
+    <node x="544.0" y="356.0">main.Main</node>
+    <node x="1829.0" y="203.0">main.Customer</node>
+    <node x="1358.0" y="203.0">command.Collection</node>
+    <node x="411.0" y="356.0">main.Filler</node>
+    <node x="342.0" y="129.0">command.Help</node>
+    <node x="892.0" y="129.0">command.Print_descending</node>
+    <node x="282.0" y="282.0">jdbc.ObjectsDAO</node>
+    <node x="1066.0" y="129.0">command.Save</node>
+    <node x="798.0" y="129.0">command.Show</node>
+    <node x="1676.0" y="203.0">main.UdpServer</node>
+    <node x="833.0" y="203.0">main.RequestHandler</node>
+    <node x="139.0" y="356.0">command.Convert</node>
+    <node x="657.0" y="129.0">command.Remove_head</node>
+    <node x="0.0" y="356.0">command.Command</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="jdbc.UserDAO" target="jdbc.DAO">
+      <point x="0.0" y="-14.5" />
+      <point x="47.0" y="257.0" />
+      <point x="165.33333333333348" y="257.0" />
+      <point x="-22.666666666666515" y="14.5" />
+    </edge>
+    <edge source="command.Head" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="285.0" y="69.0" />
+      <point x="922.0" y="69.0" />
+      <point x="-47.0" y="14.5" />
+    </edge>
+    <edge source="command.Info" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="191.0" y="59.0" />
+      <point x="912.5999999999999" y="59.0" />
+      <point x="-56.40000000000009" y="14.5" />
+    </edge>
+    <edge source="command.ExecuteScript" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="67.0" y="49.0" />
+      <point x="903.2" y="49.0" />
+      <point x="-65.79999999999995" y="14.5" />
+    </edge>
+    <edge source="command.Show" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="835.0" y="109.0" />
+      <point x="959.5999999999999" y="109.0" />
+      <point x="-9.400000000000091" y="14.5" />
+    </edge>
+    <edge source="command.Remove_head" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="717.5" y="99.0" />
+      <point x="950.2" y="99.0" />
+      <point x="-18.799999999999955" y="14.5" />
+    </edge>
+    <edge source="command.Help" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="379.0" y="79.0" />
+      <point x="931.4000000000001" y="79.0" />
+      <point x="-37.59999999999991" y="14.5" />
+    </edge>
+    <edge source="command.Add" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1691.0" y="69.0" />
+      <point x="1016.0" y="69.0" />
+      <point x="47.0" y="14.5" />
+    </edge>
+    <edge source="command.Clear" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1785.5" y="59.0" />
+      <point x="1025.4" y="59.0" />
+      <point x="56.40000000000009" y="14.5" />
+    </edge>
+    <edge source="command.Add_if_min" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1903.0" y="49.0" />
+      <point x="1034.8000000000002" y="49.0" />
+      <point x="65.80000000000018" y="14.5" />
+    </edge>
+    <edge source="command.Print_descending" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="command.Save" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1103.0" y="109.0" />
+      <point x="978.4000000000001" y="109.0" />
+      <point x="9.400000000000091" y="14.5" />
+    </edge>
+    <edge source="command.Update" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1204.0" y="99.0" />
+      <point x="987.8" y="99.0" />
+      <point x="18.799999999999955" y="14.5" />
+    </edge>
+    <edge source="jdbc.ObjectsDAO" target="jdbc.DAO">
+      <point x="0.0" y="-14.5" />
+      <point x="339.0" y="257.0" />
+      <point x="210.66666666666652" y="257.0" />
+      <point x="22.666666666666515" y="14.5" />
+    </edge>
+    <edge source="jdbc.RegistrationDAO" target="jdbc.DAO">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="command.Print_field_ascending_mood" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1378.5" y="89.0" />
+      <point x="997.2" y="89.0" />
+      <point x="28.200000000000045" y="14.5" />
+    </edge>
+    <edge source="command.Remove_by_id" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="1573.0" y="79.0" />
+      <point x="1006.6000000000001" y="79.0" />
+      <point x="37.600000000000136" y="14.5" />
+    </edge>
+    <edge source="command.Filter_starts_with_name" target="command.ExecuteCommand">
+      <point x="0.0" y="-14.5" />
+      <point x="536.5" y="89.0" />
+      <point x="940.8" y="89.0" />
+      <point x="-28.200000000000045" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="211.5" y="702.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

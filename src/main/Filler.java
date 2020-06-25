@@ -221,6 +221,7 @@ public class Filler {
 
     public Car isCoolCar(String args) {
         System.out.print("У вашего героя крутая машина ? (Да / Нет) ");
+        //System.out.println(args);
         String ans;
         if (!args.equals(""))
             ans = args.toLowerCase();

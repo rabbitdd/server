@@ -2,6 +2,8 @@ package human;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
+
 /**
  * Класс HumanBeing
  * @author Мишанин Никита
@@ -10,7 +12,7 @@ public class HumanBeing implements Comparable<HumanBeing>, Serializable {
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
-    private java.time.LocalDate creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private java.util.Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     private boolean realHero;
     private Boolean hasToothpick; //Поле не может быть null
     private Integer impactSpeed; //Значение поля должно быть больше -937, Поле не может быть null
@@ -56,11 +58,11 @@ public class HumanBeing implements Comparable<HumanBeing>, Serializable {
         this.coordinates = coordinates;
     }
 
-    public LocalDate getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDate creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 

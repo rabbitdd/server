@@ -14,6 +14,6 @@ public class Save implements ExecuteCommand {
 
     @Override
     public void execute(Command command) {
-        collection.save(People);
+        //collection.save(People);
     }
 }

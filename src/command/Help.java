@@ -9,6 +9,6 @@ public class Help implements ExecuteCommand{
 
     @Override
     public void execute(Command command) {
-        collection.help();
+        collection.help(command);
     }
 }

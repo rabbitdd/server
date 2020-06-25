@@ -1,11 +1,43 @@
 package command;
 
 import human.HumanBeing;
+import main.Customer;
 
 import java.io.Serializable;
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
+import java.util.concurrent.ForkJoinTask;
 
 public class Command implements Serializable {
     private HumanBeing human;
+    StringBuilder ans = new StringBuilder();
+    SocketAddress remoteAdd;
+    public SocketAddress getRemoteAdd() {
+        return remoteAdd;
+    }
+    public void setRemoteAdd(SocketAddress remoteAdd) {
+        this.remoteAdd = remoteAdd;
+    }
+
+
+
+    public StringBuilder getAns() {
+        return ans;
+    }
+
+    public void setAns(StringBuilder ans) {
+        this.ans = ans;
+    }
+
+    public Customer getUser() {
+        return user;
+    }
+
+    public void setUser(Customer user) {
+        this.user = user;
+    }
+
+    private Customer user;
 
     public HumanBeing getHuman() {
         return human;

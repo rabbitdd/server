@@ -2,6 +2,7 @@ package main;
 
 import command.*;
 import human.HumanBeing;
+import jdbc.Registration;
 
 import java.time.LocalDate;
 import java.util.ArrayDeque;
@@ -96,17 +97,22 @@ public class Application {
             case "update":
                 user.update(command);
                 break;
+            case "login":
+                Registration.reg(command.getUser(), command);
+                break;
             default:
-                UdpServer.ans.append("Такой команды не существует, повторите ввод").append("\n");
+                command.setAns(new StringBuilder("Такой команды не существует, повторите ввод"));
         }
     }
 
     public static HumanBeing createObject(Command command, HashSet<Long> Id) {
         String[] args = command.getArgs();
+        //System.out.println(args[1] + args[2] + args[3]);
+        //System.exit(0);
         Filler fill = new Filler();
         HumanBeing element = new HumanBeing();
         element.setName(fill.fillName(args[1]));
-        element.setCreationDate(LocalDate.now());
+        element.setCreationDate(new java.util.Date());
         element.setCoordinates(fill.fillCoordinates(args[2], args[3]));
         element.setRealHero(fill.isHero(args[4]));
         element.setHasToothpick(fill.tooth(args[5]));
