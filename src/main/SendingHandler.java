@@ -28,7 +28,7 @@ public class SendingHandler implements Runnable {
             System.out.println(command.getAns());
             System.out.println("----------------------------------");
             //Registration.showMap();
-            buffer.put(Serializer.serialize(command.getAns()));
+            buffer.put(Serializer.serialize(command));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -54,6 +54,7 @@ public class Parser implements Source {
                 }
                 human.setCar(new Car(data.getBoolean(9)));
                 human.setCoordinates(new Coordinates(data.getFloat(10), data.getInt(11)));
+                human.setUsername(data.getString(12));
                 //System.out.println(human.getName());
                 Humanity.add(human);
             }

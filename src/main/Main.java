@@ -29,9 +29,9 @@ public class Main {
     static ArrayList<Long> objectId = new ArrayList<>();
     public static void main(String[] args) throws ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
-        String url = "jdbc:postgresql://pg:5432/studs";
-        String name = "s284694";
-        String password = "zhl595";
+        String url = "jdbc:postgresql://localhost:5432/Human";
+        String name = "postgres";
+        String password = "12345aA";
         try {
             UdpServer.log.info("Начало работы");
             //BufferedInputStream input = new BufferedInputStream(new FileInputStream(path_in));
@@ -76,7 +76,7 @@ public class Main {
                     new Help(collection),
                     new Save(collection, Humanity),
                     new ExecuteScript(collection, set, Id, lock),
-                    new Update(collection, Humanity, person, objectsDAO, lock)
+                    new Update(collection, Humanity, person, objectsDAO, lock), new UpdateInterface(collection, Humanity, lock)
             );
             Application app = new Application(person, Humanity, Id, collection, SortList, set, user);
             //Client client = new Client(channel, 8080);

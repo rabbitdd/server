@@ -5,7 +5,8 @@ import command.ExecuteCommand;
 
 public class User {
     ExecuteCommand add, add_if_min, clear, filter_starts_with_name, head, info, print_descending,
-            print_field_ascending_mood, remove_by_id, remove_head, show, help, save, execute_script, update;
+            print_field_ascending_mood, remove_by_id, remove_head, show, help, save, execute_script, update,
+    updateInterface;
 
     public User(ExecuteCommand add,
                 ExecuteCommand add_if_min,
@@ -21,7 +22,8 @@ public class User {
                 ExecuteCommand help,
                 ExecuteCommand save,
                 ExecuteCommand execute_script,
-                ExecuteCommand update) {
+                ExecuteCommand update,
+                ExecuteCommand updateInterface) {
         this.add = add;
         this.add_if_min = add_if_min;
         this.clear = clear;
@@ -37,6 +39,7 @@ public class User {
         this.save = save;
         this.execute_script = execute_script;
         this.update = update;
+        this.updateInterface = updateInterface;
     }
 
     public void add(Command command) {
@@ -64,4 +67,5 @@ public class User {
     public void help(Command command) { help.execute(command);}
     public void save(Command command) {save.execute(command);}
     public void execute_script(Command command) {execute_script.execute(command);}
+    public void updateInterface(Command command) {updateInterface.execute(command);}
 }

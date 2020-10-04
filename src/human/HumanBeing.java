@@ -19,7 +19,52 @@ public class HumanBeing implements Comparable<HumanBeing>, Serializable {
     private WeaponType weaponType; //Поле может быть null
     private Mood mood; //Поле не может быть null
     private Car car; //Поле не может быть null
+    private float x;
+    private String username;
+    private String dateFormat;
 
+    public String getDateFormat() {
+        return dateFormat;
+    }
+
+    public void setDateFormat(String dateFormat) {
+        this.dateFormat = dateFormat;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public float getxPoint() {
+        return x;
+    }
+
+    public void setxPoint(float xPoint) {
+        x = xPoint;
+    }
+
+    public Integer getyPoint() {
+        return yPoint;
+    }
+
+    public void setyPoint(Integer yPoint) {
+        this.yPoint = yPoint;
+    }
+
+    private Integer yPoint;
+    public boolean isCoolCar() {
+        return CoolCar;
+    }
+
+    public void setCoolCar(boolean coolCar) {
+        CoolCar = coolCar;
+    }
+
+    private boolean CoolCar;
     /*HumanBeing(Long id, String name, Coordinates coordinates, java.time.LocalDate creationDate, boolean realHero, Boolean hasToothpick,
                Integer impactSpeed, WeaponType weaponType, Mood mood, Car car){
         this.id = id;

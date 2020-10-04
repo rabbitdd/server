@@ -38,9 +38,11 @@ public class Collection {
         Person.setCreationDate(new java.util.Date());
         lock.writeLock().lock();
         try {
+            Person.setUsername(command.getUser().getLogin());
             System.out.println(user.create(Person));
             objectsDAO.setCommand(command);
             objectsDAO.create(command.getUser());
+
             Humanity.add(Person);
             Thread.sleep(2000);
         } catch (SQLException | InterruptedException e) {
@@ -234,7 +236,7 @@ public class Collection {
             }
         });
         command.ans.append("Поля Mood в порядке возрастания:" + "\n");
-        Mood.forEach(x -> command.ans.append("Имя: ").append(x.getName()).append("\nID: ").append(x.getId()).append("\nНастроение: ").append(x.getMood()));
+        Mood.forEach(x -> command.ans.append("Имя: ").append(x.getName()).append("\nID: ").append(x.getId()).append("\nНастроение: ").append(x.getMood()).append("\n"));
         Mood.clear();
         //command.setAns(ans);
         UdpServer.log.info("Выполнена команда print_field_ascending_mood");
@@ -396,5 +398,14 @@ public class Collection {
             //lock.readLock().unlock();
         }
         UdpServer.log.info("Выполнена команда execute_script");
+    }
+
+    void UpdateInterface(ArrayDeque<HumanBeing> People, Command command, ReadWriteLock lock) {
+        lock.writeLock().lock();
+        try {
+            command.setPeople(People);
+        } finally {
+            lock.writeLock().unlock();
+        }
     }
 }

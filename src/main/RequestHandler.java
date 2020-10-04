@@ -11,6 +11,7 @@ public class RequestHandler implements Runnable {
 
     @Override
     public void run() {
+        //command.getHuman().setUsername(command.getUser().getUserName());
         //UdpServer.ans = new StringBuilder();
         Application.Request(command);
         System.out.println(Thread.currentThread().getName());

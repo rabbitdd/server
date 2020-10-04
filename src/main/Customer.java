@@ -4,15 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Customer implements Serializable {
-    ArrayList<Long> objectId;
-
-    public ArrayList<Long> getObjectId() {
-        return objectId;
-    }
-
-    public void setObjectId(ArrayList<Long> objectId) {
-        this.objectId = objectId;
-    }
 
     public String getLogin() {
         return login;
@@ -24,10 +15,18 @@ public class Customer implements Serializable {
 
     private String login;
     private String password;
-    public Customer(String login, String password, ArrayList<Long> objectId) {
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    public Customer(String login, String password) {
         this.login = login;
         this.password = password;
-        this.objectId = objectId;
     }
 
 }

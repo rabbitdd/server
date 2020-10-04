@@ -6,10 +6,21 @@ import main.Customer;
 import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
+import java.util.ArrayDeque;
 import java.util.concurrent.ForkJoinTask;
 
 public class Command implements Serializable {
     private HumanBeing human;
+    private ArrayDeque<HumanBeing> People;
+
+    public ArrayDeque<HumanBeing> getPeople() {
+        return People;
+    }
+
+    public void setPeople(ArrayDeque<HumanBeing> people) {
+        People = people;
+    }
+
     StringBuilder ans = new StringBuilder();
     SocketAddress remoteAdd;
     public SocketAddress getRemoteAdd() {

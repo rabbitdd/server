@@ -28,6 +28,7 @@ public class UserDAO implements DAO<HumanBeing, String> {
             statement.setBoolean(8, human.getCar().isCool());
             statement.setFloat(9, human.getCoordinates().getX());
             statement.setInt(10, human.getCoordinates().getY());
+            statement.setString(11, human.getUsername());
             //statement.executeUpdate();
             ResultSet set = statement.executeQuery();
             set.next();
@@ -82,8 +83,8 @@ public class UserDAO implements DAO<HumanBeing, String> {
         //GET("SELECT name, id, coordinates, Date, realHero, hasToothpick, impactSpeed, weaponType, mood, car, coordinate_x, coordinate_y " +
         //        "FROM People"),
         INSERT("INSERT INTO People (name, id, Date, realHero, hasToothpick, " +
-                "impactSpeed, weaponType, mood, car, coordinate_x, coordinate_y) " +
-                "VALUES (?, nextval('generate'), ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id"),
+                "impactSpeed, weaponType, mood, car, coordinate_x, coordinate_y, username) " +
+                "VALUES (?, nextval('generate'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id"),
         DELETE("DELETE FROM People WHERE id = "),
         UPDATE("UPDATE People SET name = ?, Date = ?, realHero = ?, hasToothpick = ?, impactSpeed = " +
                 "?, weaponType = ?, mood = ?, car = ?, coordinate_x = ?, coordinate_y = ? WHERE id = ")

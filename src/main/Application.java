@@ -100,6 +100,9 @@ public class Application {
             case "login":
                 Registration.reg(command.getUser(), command);
                 break;
+            case "updateInterface":
+                user.updateInterface(command);
+                break;
             default:
                 command.setAns(new StringBuilder("Такой команды не существует, повторите ввод"));
         }
